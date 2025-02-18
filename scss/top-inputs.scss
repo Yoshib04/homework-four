@@ -1,0 +1,39 @@
+.top-inputs{
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 30px;
+   padding: 0 40px;
+   bottom: 160px;
+
+
+   input {
+      border: solid 1px #2f49f3;
+      height: 58px;
+      padding-left: 20px;
+   }
+
+   .input-holder{
+      position: relative;
+
+      .box{
+         position: absolute;
+         right: 10px;
+         bottom: 9px;
+         width: 40px;
+         height: 40px;
+         background-color: blue;
+
+      }
+   }
+
+   .small {
+      width: 344px;
+   }
+
+   .big {
+      width: 453px;
+   }
+
+}

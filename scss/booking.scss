@@ -1,0 +1,152 @@
+@use "variables" as v;
+
+.booking-form-section {
+  padding: 40px 0;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  width: 80%;
+  margin-left: 130px;
+}
+
+.booking-form-container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bookTitle {
+  font-size: 40px;
+  color: #000;
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-family: ProximaNovaThin;
+  transform: scaleY(1.5);
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  h4 {
+    font-family: GillSans;
+    font-weight: lighter;
+    margin-left: 40px;
+  }
+}
+
+
+.input.small,
+.input.big,
+input.small,
+input.big,
+select.dropBox {
+  border: 1px solid #87CEFA;
+  padding: 12px 15px;
+  font-size: 16px;
+  font-family: ProximaNova;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+input.small,
+select.dropBox {
+  width: calc(50% - 7.5px);
+  min-width: 100px;
+
+  @media (max-width: 768px) {
+    width: 100%; // Full width on mobile
+  }
+}
+
+input.big {
+  width: 75%;
+
+  @media (max-width: 768px) {
+    width: 100%; // Full width on mobile
+  }
+}
+
+.form-row.dropdowns {
+  justify-content: flex-start;
+  gap: 20px;
+  
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+select.dropBox {
+  appearance: none;
+  -webkit-appearance: none;
+  background: url('../images/down-arrow.svg') no-repeat right 10px center;
+  width: 128px;
+  
+}
+
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: url('../images/calendar-arrow.svg') no-repeat right 10px center;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  font-family: ProximaNova;
+  border: 1px solid #87CEFA;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  min-height: 120px;
+  resize: vertical;
+  color: #000;
+}
+
+.submit-button {
+  background-color: #79ADDC;
+  color: #FFF;
+  padding: 12px 25px;
+  font-size: 10px;
+  font-family: ProximaNova;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  width: 100%;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darken(#ADD8E6, 10%);
+  }
+}

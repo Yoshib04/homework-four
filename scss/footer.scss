@@ -1,0 +1,23 @@
+footer{
+   position: relative;
+   background-color: #87CEFA;
+   bottom: 0;
+
+   .footer-container{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      
+      p{
+         padding-top: 20px;
+         color: #FFF;
+         font-size: xx-small;
+      }
+      h2{
+         color: #FFF;
+         padding-top: 20px;
+      }
+   }
+   
+}

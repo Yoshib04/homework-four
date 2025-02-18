@@ -1,0 +1,63 @@
+@use "variables" as v;
+
+.photo-container {
+  position: relative;
+  height: v.$photo-container-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+
+  .readMore {
+    height: 40px;
+    width: 120px;
+    background-color: #79ADDC;
+    color: #FFF;
+    padding-top: 10px;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-family: GillSans;
+  }
+
+  .hero-text {
+    position: relative;
+    color: white;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px;
+
+    h1 {
+      font-size: 35px;
+      margin-bottom: 10px;
+      font-family: ProximaNovaThin;
+      transform: scaleY(1.5);
+      margin-bottom: 50px;
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 75%;
+      margin: 0 auto;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 20px 0;
+  }
+}
