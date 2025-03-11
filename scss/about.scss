@@ -1,0 +1,271 @@
+@use "variables" as v;
+
+.content {
+  max-width: 1280px;
+  min-height: 600px;
+  margin: 0 auto;
+
+  .top-container {
+    min-height: 300px;
+    max-width: 1175px;
+    padding-top: 150px;
+    padding-left: 150px;
+    margin-bottom: 100px;
+
+    .about-section {
+      h2 {
+        max-width: 200px;
+        font-size: 40px;
+        color: #000;
+        margin-bottom: 30px;
+        font-weight: normal;
+        font-family: ProximaNovaThin;
+        transform: scaleY(1.5);
+        border-bottom: solid 2px black;
+        @media (max-width: 768px) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  h3 {
+    max-width: 250px;
+    font-size: 25px;
+    color: #000;
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-family: ProximaNovaThin;
+    transform: scaleY(1.5);
+    border-bottom: solid 2px black;
+    margin-left: 150px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  .bottom-container {
+    min-height: 200px;
+    padding-left: 150px;
+  }
+
+  .quote {
+    max-width: 676px;
+    min-height: 150px;
+    display: flex;
+    margin-bottom: 20px;
+
+    .quote-image-holder {
+      width: 260px;
+      height: 150px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-position: top;
+        object-fit: cover;
+      }
+    }
+
+    .quote-text-author {
+      width: 385px;
+      height: 150px;
+      margin: auto;
+      position: relative;
+      font-family: GillSansItalic;
+
+      .author {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: #87CEFA;
+        font-size: large;
+        font-family: ProximaNovaThin;
+      }
+    }
+  }
+}
+
+.active {
+  color: black !important;
+}
+
+.nav2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  border-bottom: solid 2px black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 0;
+  padding: 0 150px;
+  font-family: ProximaNovaThin;
+  z-index: 100;
+}
+
+.mini-container {
+  min-height: 200px;
+}
+
+@media all and (max-width: 676px) {
+  .content {
+    .bottom-container {
+      .quote {
+        flex-direction: column;
+        width: 260px;
+        margin: 0 auto;
+
+        .quote-text-author {
+          margin-top: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* Additional Media Queries for Responsiveness */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .content {
+    .top-container {
+      padding-left: 100px;
+      padding-top: 120px;
+      max-width: 90%;
+    }
+
+    h3 {
+      margin-left: 100px;
+    }
+
+    .bottom-container {
+      padding-left: 100px;
+    }
+
+    .quote {
+      max-width: 100%;
+    }
+  }
+
+  .nav2 {
+    padding: 0 100px;
+  }
+}
+
+/* Smaller Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .content {
+    .top-container {
+      padding-left: 50px;
+      padding-top: 100px;
+      margin-bottom: 50px;
+    }
+
+    h3 {
+      margin-left: 50px;
+    }
+
+    .bottom-container {
+      padding-left: 50px;
+    }
+
+    .quote {
+      .quote-image-holder {
+        width: 200px;
+        height: 120px;
+      }
+
+      .quote-text-author {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .nav2 {
+    padding: 0 50px;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .links {
+      margin-top: 10px;
+
+      a {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .content {
+    .top-container {
+      padding-left: 20px;
+      padding-top: 80px;
+      margin-bottom: 30px;
+
+      .about-section {
+        h2 {
+          max-width: 150px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    h3 {
+      margin-left: 20px;
+      max-width: 200px;
+    }
+
+    .bottom-container {
+      padding-left: 20px;
+
+      .quote {
+        width: 100%;
+        margin: 0 auto 20px;
+
+        .quote-image-holder {
+          width: 100%;
+          height: 120px;
+        }
+
+        .quote-text-author {
+          margin-top: 10px;
+          font-size: 12px;
+
+          .author {
+            position: static;
+            text-align: right;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .nav2 {
+    padding: 10px 20px;
+
+    .logo img {
+      width: 80px;
+    }
+
+    .links a {
+      font-size: 14px;
+    }
+  }
+
+  .mini-container {
+    min-height: 150px;
+  }
+}
